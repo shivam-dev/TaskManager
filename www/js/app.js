@@ -43,6 +43,14 @@ angular.module('ionicApp', ['ionic'])
  	 	}    
           }
      })
+    .state('eventmenu.viewtask', {
+	url:"/viewtask",
+        views:{
+           'menuContent': { 
+            	templateUrl: "templates/view-task.html"  
+           }
+        }
+     })
     .state('eventmenu.checkin', {
       url: "/check-in",
       views: {
@@ -74,7 +82,8 @@ angular.module('ionicApp', ['ionic'])
   ];
    
   $scope.tasks = [
-                { title: "Meeting At 10pm", desc: "I have meeting on ABC place at 10pm with Mr.XYZ." }
+                { title: "Meeting At 10pm", desc: "I have meeting on ABC place at 10pm with Mr.XYZ." },
+                { title: "Go to Watch Movie", desc: "I have to schedule for movie 1t 9am." }
         ];
   
   $scope.toggleLeft = function() {

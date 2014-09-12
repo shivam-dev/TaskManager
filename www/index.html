@@ -46,7 +46,7 @@
             <ul class="list">
               <!-- Note each link has the 'menu-close' attribute so the menu auto closes when clicking on one of these links -->
               <a href="#/event/newtask" class="item" menu-close>Add New Task</a>
-              <a href="#/event/attendees" class="item" menu-close>View Task</a>
+              <a href="#/event/viewtask" class="item" menu-close>View Task</a>
 	      <a href="#/event/attendees" class="item" menu-close>View Completed Task</a>
  	      <a href="#/event/holidays" class="item" menu-close>Calendar</a>
             </ul>
@@ -75,7 +75,12 @@
     <script id="templates/home.html" type="text/ng-template">
       <ion-view title="Task Manager & Reminder">
         <ion-content padding="true">
+          <p>Welcome, TaskManager</p>
           <p>Manage Your Work & Activities, Set Alert, Reminders and manage Holidays </p>
+
+	<div class="bar bar-footer bar-balanced">
+  <div class="title">TaskManager@2014 &copy LMS</div>
+</div>
         </ion-content>
       </ion-view>
     </script>
@@ -166,11 +171,15 @@
       </ion-view>
     </script>
   
-    <script id="templates/viewtask.html" type="text/ng-template">
-	<ion-view title="Event Attendees" left-buttons="leftButtons">
+    <script id="templates/view-task.html" type="text/ng-template">
+      <ion-view title="Your Tasks" left-buttons="leftButtons">
         <ion-content>
-
-		
+            <div class="item subheader" ng-repeat="task in tasks">
+		<h2 class="title">{{ task.title }}</h2>
+ 		<p>{{ task.desc }}</p>
+            </div>
+	</ion-content>
+      </ion-view>	
 
     </script>
 
