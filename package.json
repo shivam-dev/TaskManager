@@ -1,7 +1,7 @@
 {
   "name": "taskmanage",
   "version": "1.0.0",
-  "description": "TaskManage: An Ionic project",
+  "description": "TaskManage: An Open Source Task Manager",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^0.7.1",
